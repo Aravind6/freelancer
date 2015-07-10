@@ -1,0 +1,68 @@
+//variables
+$font-body:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+$color-bodyfont:#333;
+body
+{
+	font:$font-body;
+	color:$color-bodyfont;
+}
+
+// nesting
+
+header {
+    text-align: center;
+    color: $color-bodyfont
+    background: #18bc9c;
+
+
+ .container {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    }
+
+ img {
+    display: block;
+    margin: 0 auto 20px;
+     }
+
+.intro-text{
+   .name {
+    display: block;
+    text-transform: uppercase;
+    font-family: font-body;
+    font-size: 2em;
+    font-weight: 700;
+     }
+
+  .skills {
+    font-size: 1.25em;
+    font-weight: 300;
+}
+}
+
+//inheritance
+
+.mobile h1
+{
+        font-size: 33px;
+        color: #4D4D4D;
+        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-weight: 100;
+        margin-bottom: 20px;
+         
+        text-align: left;
+        letter-spacing: normal;
+        line-height: 1.1;
+        padding-bottom: 0px;
+}
+
+.responsive h1
+{
+	@extend .mobile h1;
+	padding-left:30px;
+}
+.enterprise h1
+{
+	@extend .mobile h1;
+	color:#4D4D4D
+}
